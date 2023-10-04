@@ -1,0 +1,34 @@
+version: '3.9'
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: ./infra/backend/Dockerfile
+    container_name: ${APP_NAME}_backend
+    working_dir: '/root/src'
+    tty: true
+    volumes:
+      - ./src/backend:/root/src
+    ports:
+      - 8888:80
+  db:
+    container_name: ${APP_NAME}_db
+    build:
+      context: .
+      dockerfile: ./infra/db/Dockerfile
+      args:
+        - MYSQL_DATABASE=${DB_NAME}
+        - MYSQL_USER=${DB_USER}
+        - MYSQL_PASSWORD=${DB_PASS}
+        - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
+    ports:
+      - 3336:3306
+    volumes:
+      - db-store:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
+volumes:
+  db-store:
