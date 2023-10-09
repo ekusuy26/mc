@@ -12,6 +12,8 @@ frontend:
 	docker-compose exec frontend sh
 backend:
 	docker-compose exec backend bash
+nginx:
+	docker-compose exec nginx bash
 db:
 	docker-compose exec db bash
 connect_db:
