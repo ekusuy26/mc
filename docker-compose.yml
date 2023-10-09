@@ -1,7 +1,20 @@
 version: '3.9'
 services:
-  backend:
+  frontend:
     build: 
+      context: .
+      dockerfile: ./infra/frontend/Dockerfile
+    container_name: ${APP_NAME}_frontend
+    working_dir: '/root/src'
+    tty: true
+    volumes:
+      - ./src/frontend:/root/src
+    ports:
+      - 3333:3000
+    environment:
+      - WATCHPACK_POLLING=true
+  backend:
+    build:
       context: .
       dockerfile: ./infra/backend/Dockerfile
     container_name: ${APP_NAME}_backend
