@@ -14,7 +14,7 @@ services:
     environment:
       - WATCHPACK_POLLING=true
   backend:
-    build: 
+    build:
       context: .
       dockerfile: ./infra/backend/Dockerfile
     container_name: ${APP_NAME}_backend
