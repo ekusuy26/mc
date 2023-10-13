@@ -1,0 +1,3 @@
+steps:
+  - name: "bash"
+    script: echo "Hello World"
