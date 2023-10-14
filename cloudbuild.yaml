@@ -8,7 +8,7 @@ steps:
         "build",
         "-t",
         "${_LOCATION}-docker.pkg.dev/${_PROJECT}/${_REPOSITORY}/${_IMAGE}",
-        ".",
+        "./infra/frontend",
       ]
   # Push the container image to Container Registry
   - name: "gcr.io/cloud-builders/docker"
