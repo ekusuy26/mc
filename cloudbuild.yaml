@@ -1,13 +1,19 @@
 steps:
   - name: "ubuntu"
-    args: ["echo", "hello ${_PROJECT_ID}"]
-substitutions:
-  _PROJECT_ID: hoge
-options:
-  substitution_option: "ALLOW_LOOSE"
-  # _CLOUDSDK_COMPUTE_ZONE: ゾーンを指定
-  # _CLOUDSDK_CONTAINER_CLUSTER: クラスタ名を指定
-  # _IMAGE_NAME: イメージ名を指定
+    args: ["echo", "hello $$project"]
+    secretEnv: ["project"]
+availableSecrets:
+  secretManager:
+    - versionName: projects/454603325665/secrets/project/versions/1
+      env: project
+# substitutions:
+#   _PROJECT_ID: hoge
+# options:
+#   substitution_option: "ALLOW_LOOSE"
+
+# _CLOUDSDK_COMPUTE_ZONE: ゾーンを指定
+# _CLOUDSDK_CONTAINER_CLUSTER: クラスタ名を指定
+# _IMAGE_NAME: イメージ名を指定
 # steps:
 #   - name: 'gcr.io/cloud-builders/docker'
 #     args: [ 'build', '-t', '${_LOCATION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/${_IMAGE}', '.' ]
