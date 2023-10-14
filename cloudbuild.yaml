@@ -1,6 +1,6 @@
 steps:
   - name: "ubuntu"
-    args: ["echo", "hello {_PROJECT}"]
+    args: ["echo", "hello ${_PROJECT}"]
 # substitutions:
 #   _PROJECT_ID: hoge
 # options:
