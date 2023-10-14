@@ -24,7 +24,7 @@ steps:
       [
         "run",
         "deploy",
-        "SERVICE-NAME",
+        "mc-frontend",
         "--image",
         "${_LOCATION}-docker.pkg.dev/${_PROJECT}/${_REPOSITORY}/${_IMAGE}",
         "--region",
