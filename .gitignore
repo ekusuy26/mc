@@ -3,3 +3,4 @@ __pycache__
 .vscode
 memo.txt
 terraform
+terraform_serverless
