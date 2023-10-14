@@ -4,8 +4,7 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args:
       [
-        "build",
-        "-t",
+        "pull",
         "${_LOCATION}-docker.pkg.dev/${_PROJECT}/${_REPOSITORY}/${_IMAGE}",
         ".",
       ]
