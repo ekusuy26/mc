@@ -1,11 +1,6 @@
 steps:
   - name: "ubuntu"
-    args: ["echo", "hello $$project"]
-    secretEnv: ["project"]
-availableSecrets:
-  secretManager:
-    - versionName: projects/454603325665/secrets/project/versions/1
-      env: project
+    args: ["echo", "hello {_PROJECT}"]
 # substitutions:
 #   _PROJECT_ID: hoge
 # options:
