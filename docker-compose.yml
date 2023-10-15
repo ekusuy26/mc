@@ -21,8 +21,8 @@ services:
     tty: true
     volumes:
       - ./src/frontend:/root/src
-    ports:
-      - 3000:3000
+    # ports:
+    #   - 3000:3000
     environment:
       - WATCHPACK_POLLING=true
   backend:
