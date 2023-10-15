@@ -4,4 +4,6 @@ RUN mkdir -p /root/src
 
 WORKDIR /root/src
 
+EXPOSE 3000
+
 CMD ["yarn","dev"]
