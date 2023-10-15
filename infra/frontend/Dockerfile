@@ -4,7 +4,8 @@ RUN mkdir -p /root/src
 
 WORKDIR /root/src
 
-COPY ./src/frontend/package.json ./
+# COPY ./src/frontend/package.json ./
+RUN ls -a
 RUN yarn install
 
 EXPOSE 3000
