@@ -32,6 +32,7 @@ steps:
         "--port",
         "3000",
       ]
+    dir: "src/frontend"
   # - name: "gcr.io/cloud-builders/docker"
   #   args:
   #     [
