@@ -2,5 +2,7 @@ __pycache__
 .env
 .vscode
 memo.txt
-terraform
-terraform_serverless
+terraform/*
+terraform_serverless/*
+!main.tf
+!variables.tf
