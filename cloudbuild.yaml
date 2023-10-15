@@ -29,6 +29,8 @@ steps:
         "${_LOCATION}-docker.pkg.dev/${_PROJECT}/${_REPOSITORY}/${_IMAGE}",
         "--region",
         "${_REGION}",
+        "--port",
+        "3000",
       ]
   # - name: "gcr.io/cloud-builders/docker"
   #   args:
