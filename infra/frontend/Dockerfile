@@ -4,10 +4,9 @@ RUN mkdir -p /root/src
 
 WORKDIR /root/src
 
-# COPY ./src/frontend/package.json ./
-RUN ls -a
+COPY . .
 RUN yarn install
 
-EXPOSE 3000
+# EXPOSE 3000
 
 CMD ["yarn","dev"]
