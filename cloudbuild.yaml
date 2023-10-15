@@ -30,9 +30,7 @@ steps:
         "--region",
         "${_REGION}",
         "--port",
-        "3000",
-        "--host",
-        "0.0.0.0",
+        "3000:3000",
       ]
   # - name: "gcr.io/cloud-builders/docker"
   #   args:
