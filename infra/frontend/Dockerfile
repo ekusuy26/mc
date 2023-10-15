@@ -7,6 +7,6 @@ WORKDIR /root/src
 COPY . .
 RUN yarn install
 
-# EXPOSE 3000
+EXPOSE 3000
 
 CMD ["yarn","start"]
