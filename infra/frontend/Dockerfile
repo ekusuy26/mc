@@ -4,7 +4,8 @@ RUN mkdir -p /root/src
 
 WORKDIR /root/src
 
-COPY . .
+COPY paclage.json ./
+
 RUN yarn install
 
 # EXPOSE 3000
